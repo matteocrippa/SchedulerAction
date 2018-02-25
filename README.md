@@ -3,7 +3,7 @@ An action/function/lambda scheduler with start, stop, pause function
 
 ## Setup
 
-```json
+```
 allprojects {
 		repositories {
 			...
@@ -12,7 +12,7 @@ allprojects {
 	}
 ```
 
-```json
+```
 dependencies {
 	        compile 'com.github.matteocrippa:SchedulerAction:0.0.2'
 	}
