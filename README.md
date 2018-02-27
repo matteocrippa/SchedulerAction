@@ -36,7 +36,7 @@ timer.action(1000, 0, {
         
 `action()` func needs 3 parameters:
 - duration
-- delay
+- at (optional)
 - action
 
 
