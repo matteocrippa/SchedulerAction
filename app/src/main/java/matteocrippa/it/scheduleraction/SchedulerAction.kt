@@ -63,14 +63,14 @@ class SchedulerAction(val name: String) {
         currentAction = getClosestAction()
     }
 
-    fun action(duration: Long, delay: Long, exec: (() -> Unit)?) {
+    fun action(duration: Long, isRelative: Boolean = false, exec: (() -> Unit)?) {
         val id = queue.count().toLong()
 
         val action = ActionTask()
         action.id = id
         action.duration = duration
-        action.delay = delay
         action.exec = exec
+        action.isRelative = isRelative
 
         queue.add(action)
     }

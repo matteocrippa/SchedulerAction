@@ -8,6 +8,5 @@ class ActionTask {
     var id: Long = 0
     var isRelative = true
     var duration: Long = 0
-    var delay: Long = 0
     var exec: (() -> Unit)? = null
 }
