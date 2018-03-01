@@ -58,6 +58,24 @@ class SchedulerAction(val name: String) {
 
     }
 
+    fun next() {
+        if(currentAction < queue.count() - 1) {
+            currentAction += 1
+        }
+        pause()
+        // set stop
+        status = SchedulerActionStatus.Stop
+    }
+
+    fun prev() {
+        if(currentAction > 0) {
+            currentAction -= 1
+        }
+        pause()
+        // set stop
+        status = SchedulerActionStatus.Stop
+    }
+
     fun seek(newProgress: Double) {
         progress = newProgress
         currentAction = getClosestAction()

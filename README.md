@@ -45,6 +45,8 @@ Then you will be able to use:
 - play()
 - pause()
 - stop()
+- prev()
+- next()
 
 functions to manage the scheduler.
 
