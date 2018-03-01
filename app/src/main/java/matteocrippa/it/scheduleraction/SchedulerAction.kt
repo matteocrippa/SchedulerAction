@@ -108,12 +108,25 @@ class SchedulerAction(val name: String) {
                 if (isDebug) {
                     Log.d("⏲", progress.toString())
                 }
-            }, item.at)
+            }, calculateRealAt(item.at))
         }
+    }
+
+    private fun calculateRealAt(at: Long): Long {
+        return if (currentAction > 0) {
+            val item = queue[currentAction]
+            at - item.at
+        } else
+            at
     }
 
     private fun reorderQueue() {
         queue.sortBy { it.at }
+        var index = 0
+        queue.forEach {
+            it.id = index.toLong()
+            index += 1
+        }
     }
 
     private fun calculateWhen(action: ActionTask): Long {
