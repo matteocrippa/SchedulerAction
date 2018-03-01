@@ -81,7 +81,7 @@ class SchedulerAction(val name: String) {
         currentAction = getClosestAction()
     }
 
-    fun action(duration: Long, at: Long? = null, exec: (() -> Unit)?) {
+    fun action(at: Long, duration: Long? = null, exec: (() -> Unit)?) {
         val id = queue.count().toLong()
 
         val action = ActionTask()
@@ -95,13 +95,11 @@ class SchedulerAction(val name: String) {
 
     // Private functions
     private fun generate() {
+        // reorder queue
+        reorderQueue()
+        // then start processing
         for (index in currentAction until queue.count()) {
             val item = queue[index]
-            var time = calculateWhen(item)
-
-            item.at?.let {
-                time = it
-            }
 
             timer.schedule(timerTask {
                 item.exec?.invoke()
@@ -110,15 +108,19 @@ class SchedulerAction(val name: String) {
                 if (isDebug) {
                     Log.d("⏲", progress.toString())
                 }
-            }, time)
+            }, item.at)
         }
+    }
+
+    private fun reorderQueue() {
+        queue.sortBy { it.at }
     }
 
     private fun calculateWhen(action: ActionTask): Long {
         val currentItemPosition = queue.indexOf(action)
         return (currentAction..currentItemPosition)
                 .map { queue[it] }
-                .map { it.duration }
+                .map { it.duration ?: 0 }
                 .sum()
     }
 

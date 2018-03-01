@@ -6,7 +6,7 @@ package matteocrippa.it.scheduleraction
 
 class ActionTask {
     var id: Long = 0
-    var duration: Long = 0
-    var at: Long? = null
+    var duration: Long? = null
+    var at: Long = 0
     var exec: (() -> Unit)? = null
 }
