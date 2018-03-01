@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4cc479f-2722-434d-b86b-7f5b20b35bde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-    </list>
+    <list default="true" id="c4cc479f-2722-434d-b86b-7f5b20b35bde" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +48,11 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="205">
-                <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <first_editor relative-caret-position="484">
+                <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
                 <folding>
-                  <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-                  <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+                  <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+                  <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -2066,7 +2063,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519934792146" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519934847600" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2113,7 +2110,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519934792146" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519934847600" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2378,8 +2375,8 @@
           <first_editor relative-caret-position="240">
             <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
             <folding>
-              <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-              <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -2452,8 +2449,8 @@
           <first_editor relative-caret-position="240">
             <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
             <folding>
-              <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-              <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -2508,8 +2505,8 @@
           <first_editor relative-caret-position="570">
             <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
             <folding>
-              <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-              <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -2564,8 +2561,8 @@
           <first_editor relative-caret-position="240">
             <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
             <folding>
-              <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-              <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -2635,16 +2632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/matteocrippa/it/scheduleraction/SchedulerAction.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
-          <folding>
-            <element signature="e#41#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -2661,14 +2648,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/matteocrippa/it/scheduleraction/SchedulerAction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+          <folding>
+            <element signature="e#41#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="205">
-            <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <first_editor relative-caret-position="484">
+            <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
             <folding>
-              <marker date="1519934789070" expanded="true" signature="436:520" ph="{...}" />
-              <marker date="1519934789070" expanded="true" signature="464:510" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="436:520" ph="{...}" />
+              <marker date="1519934819043" expanded="true" signature="464:510" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
