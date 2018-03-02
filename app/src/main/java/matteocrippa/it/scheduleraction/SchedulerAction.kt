@@ -3,17 +3,24 @@ package matteocrippa.it.scheduleraction
 import android.util.Log
 import java.util.*
 import kotlin.concurrent.timerTask
+import kotlin.properties.Delegates
 
 /**
  * Created by matteocrippa on 25/02/2018.
  */
 
-class SchedulerAction(val name: String) {
+class SchedulerAction(val name: String, private val listener: onSchedulerListener) {
+
+    interface onSchedulerListener {
+        fun onProgress(progress: Double)
+    }
 
     enum class SchedulerActionStatus { Play, Pause, Stop }
 
     var status = SchedulerActionStatus.Stop
-    var progress = 0.0
+    var progress: Double by Delegates.observable(0.0) { _, _, _ ->
+        listener.onProgress(progress)
+    }
     var isDebug = false
 
     // private
