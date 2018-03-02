@@ -26,7 +26,9 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
     // private
     private var queue: ArrayList<ActionTask> = arrayListOf()
     private var timer = Timer(name, true)
-    private var currentAction = 0
+    private var currentAction by Delegates.observable(0) { _, _, _ ->
+        calculateProgress()
+    }
 
     // Public Functions
     fun start() {
@@ -111,12 +113,15 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
             timer.schedule(timerTask {
                 item.exec?.invoke()
                 currentAction = item.id.toInt()
-                progress = (currentAction.toDouble() / queue.count().toDouble())
                 if (isDebug) {
                     Log.d("⏲", progress.toString())
                 }
             }, calculateRealAt(item.at))
         }
+    }
+
+    private fun calculateProgress() {
+        progress = (currentAction.toDouble() / queue.count().toDouble())
     }
 
     private fun calculateRealAt(at: Long): Long {

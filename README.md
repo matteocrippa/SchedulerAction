@@ -14,7 +14,7 @@ allprojects {
 
 ```
 dependencies {
-	        compile 'com.github.matteocrippa:SchedulerAction:0.0.8'
+	        compile 'com.github.matteocrippa:SchedulerAction:0.0.9'
 	}
 ```
 
