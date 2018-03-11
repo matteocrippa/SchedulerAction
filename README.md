@@ -14,7 +14,7 @@ allprojects {
 
 ```
 dependencies {
-	        compile 'com.github.matteocrippa:SchedulerAction:0.0.9'
+	        compile 'com.github.matteocrippa:SchedulerAction:0.1.0'
 	}
 ```
 
@@ -27,7 +27,7 @@ First setup your scheduler
 
 Schedule an action
 ```kotlin
-timer.action(1000, 0, {
+timer += ActionTask(1000, 0, {
             runOnUiThread {
                 // your action
             }
@@ -36,8 +36,8 @@ timer.action(1000, 0, {
         
 `action()` func needs 3 parameters:
 - at 
-- duration (optional)
 - action
+- duration (optional)
 
 
 Then you will be able to use:

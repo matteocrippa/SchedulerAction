@@ -1,7 +1,8 @@
 package matteocrippa.it.scheduleraction
 
 import android.util.Log
-import java.util.*
+import java.util.ArrayList
+import java.util.Timer
 import kotlin.concurrent.timerTask
 import kotlin.properties.Delegates
 
@@ -90,16 +91,9 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
         currentAction = getClosestAction()
     }
 
-    fun action(at: Long, duration: Long? = null, exec: (() -> Unit)?) {
-        val id = queue.count().toLong()
-
-        val action = ActionTask()
-        action.id = id
-        action.duration = duration
-        action.exec = exec
-        action.at = at
-
-        queue.add(action)
+    operator fun plus(task: ActionTask) {
+        task.id = queue.count().toLong()
+        queue.add(task)
     }
 
     // Private functions

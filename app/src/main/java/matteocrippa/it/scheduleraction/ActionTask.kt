@@ -4,9 +4,11 @@ package matteocrippa.it.scheduleraction
  * Created by matteocrippa on 25/02/2018.
  */
 
-class ActionTask {
+
+data class ActionTask(
+    val at: Long,
+    val exec: (() -> Unit)? = null,
+    val duration: Long? = null
+) {
     var id: Long = 0
-    var duration: Long? = null
-    var at: Long = 0
-    var exec: (() -> Unit)? = null
 }
