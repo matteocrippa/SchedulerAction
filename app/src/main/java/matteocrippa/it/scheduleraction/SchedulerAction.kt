@@ -1,7 +1,8 @@
 package matteocrippa.it.scheduleraction
 
 import android.util.Log
-import java.util.*
+import java.util.ArrayList
+import java.util.Timer
 import kotlin.concurrent.timerTask
 import kotlin.properties.Delegates
 
@@ -67,6 +68,10 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
 
     }
 
+    fun clean() {
+        queue.clear()
+    }
+
     fun next() {
         if(currentAction < queue.count() - 1) {
             currentAction += 1
@@ -93,13 +98,18 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
     fun action(at: Long, duration: Long? = null, exec: (() -> Unit)?) {
         val id = queue.count().toLong()
 
-        val action = ActionTask()
+        val action = ActionTask(at, exec = {
+            exec
+        }, duration = duration)
         action.id = id
-        action.duration = duration
-        action.exec = exec
-        action.at = at
 
         queue.add(action)
+
+    }
+
+    operator fun plus(task: ActionTask) {
+        task.id = queue.count().toLong()
+        queue.add(task)
     }
 
     // Private functions
@@ -144,9 +154,9 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
     private fun calculateWhen(action: ActionTask): Long {
         val currentItemPosition = queue.indexOf(action)
         return (currentAction..currentItemPosition)
-                .map { queue[it] }
-                .map { it.duration ?: 0 }
-                .sum()
+            .map { queue[it] }
+            .map { it.duration ?: 0 }
+            .sum()
     }
 
     // calculate the closest action
