@@ -102,6 +102,10 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
         queue.add(action)
     }
 
+    fun clear() {
+        queue.clear()
+    }
+
     // Private functions
     private fun generate() {
         // reorder queue
