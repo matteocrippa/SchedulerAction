@@ -95,6 +95,18 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
         currentAction = getClosestAction()
     }
 
+    fun action(at: Long, duration: Long? = null, exec: (() -> Unit)?) {
+        val id = queue.count().toLong()
+
+        val action = ActionTask(at, exec = {
+            exec
+        }, duration = duration)
+        action.id = id
+
+        queue.add(action)
+
+    }
+
     operator fun plus(task: ActionTask) {
         task.id = queue.count().toLong()
         queue.add(task)
@@ -142,9 +154,9 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
     private fun calculateWhen(action: ActionTask): Long {
         val currentItemPosition = queue.indexOf(action)
         return (currentAction..currentItemPosition)
-                .map { queue[it] }
-                .map { it.duration ?: 0 }
-                .sum()
+            .map { queue[it] }
+            .map { it.duration ?: 0 }
+            .sum()
     }
 
     // calculate the closest action
