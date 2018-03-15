@@ -68,6 +68,10 @@ class SchedulerAction(val name: String, private val listener: onSchedulerListene
 
     }
 
+    fun clean() {
+        queue.clear()
+    }
+
     fun next() {
         if(currentAction < queue.count() - 1) {
             currentAction += 1
